@@ -1,0 +1,9 @@
+data_ingestion:
+  dataset_path: "C:/Users/Arun/Downloads/archive/casia/CASIA2"
+  raw_data_path: "data/raw/"
+
+artifacts:
+  raw_data: "artifacts/raw/"
+  processed_data: "artifacts/processed/"
+  models: "artifacts/models/"
+  results: "artifacts/results/"

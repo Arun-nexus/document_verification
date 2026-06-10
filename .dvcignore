@@ -1,0 +1,24 @@
+# Add patterns of files dvc should ignore, which could improve
+# the performance. Learn more at
+# https://dvc.org/doc/user-guide/dvcignore
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Artifacts (DVC handle karega)
+artifacts/
+
+# Logs
+logs/
+
+# Environment variables
+.env
+
+
+# IDE
+.vscode/
+.idea/
