@@ -1,24 +1,34 @@
-# Add patterns of files dvc should ignore, which could improve
-# the performance. Learn more at
-# https://dvc.org/doc/user-guide/dvcignore
-# Virtual environment
-.venv/
-venv/
-
 # Python cache
-__pycache__/
+__pycache__
 *.pyc
+*.pyo
+*.pyd
+.Python
 
-# Artifacts (DVC handle karega)
-artifacts/
+# Virtual environment
+.venv
+venv
+env
 
-# Logs
+# Logs (track nahi karne)
 logs/
+*.log
 
-# Environment variables
-.env
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints
 
+# OS files
+.DS_Store
+Thumbs.db
 
-# IDE
-.vscode/
-.idea/
+# IDE files
+.vscode
+.idea
+*.swp
+
+# Temporary files
+*.tmp
+*.temp
+
+# Git files
+.git

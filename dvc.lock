@@ -1,0 +1,26 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python -m src.data_ingestion
+    deps:
+    - path: params.yaml
+      hash: md5
+      md5: 00ddf0d60bf4c6466bfe7765b0c575fb
+      size: 259
+    - path: src/data_ingestion.py
+      hash: md5
+      md5: 3ea616e1bafb0811378a6c51a4e75ff9
+      size: 2861
+    params:
+      params.yaml:
+        data_ingestion.dataset_path: 
+          C:/Users/Arun/Downloads/archive/casia/CASIA2
+    outs:
+    - path: artifacts/raw/images.npy
+      hash: md5
+      md5: cbc45a0df053afa42f358d3201c1defb
+      size: 1878137984
+    - path: artifacts/raw/labels.npy
+      hash: md5
+      md5: e03884827cf4ea14201134b7a3e01835
+      size: 99944
