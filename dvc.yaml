@@ -21,3 +21,12 @@ stages:
       - artifacts/processed/X_val.npy
       - artifacts/processed/y_train.npy
       - artifacts/processed/y_val.npy
+  model_training:
+    cmd: python -m src.model_training
+    deps:
+      - src/model_training.py
+      - artifacts\processed\X_train.npy
+      - artifacts\processed\y_train.npy
+      - params.yaml
+    outs:
+      - artifacts\models\fraud_detector.pt

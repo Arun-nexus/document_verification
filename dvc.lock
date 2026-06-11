@@ -5,8 +5,8 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: 00ddf0d60bf4c6466bfe7765b0c575fb
-      size: 259
+      md5: 800b6114484b557a8b77e5733b3eb743
+      size: 329
     - path: src/data_ingestion.py
       hash: md5
       md5: 3ea616e1bafb0811378a6c51a4e75ff9
@@ -37,8 +37,8 @@ stages:
       size: 99944
     - path: params.yaml
       hash: md5
-      md5: 00ddf0d60bf4c6466bfe7765b0c575fb
-      size: 259
+      md5: 800b6114484b557a8b77e5733b3eb743
+      size: 329
     - path: src/data_preprocessing.py
       hash: md5
       md5: 8953f435cbc18bd930e64a045d08459a
@@ -60,3 +60,27 @@ stages:
       hash: md5
       md5: fb9c3040ae4cafedb143c17e18bd6dff
       size: 20096
+  model_training:
+    cmd: python -m src.model_training
+    deps:
+    - path: artifacts\processed\X_train.npy
+      hash: md5
+      md5: db2bc99a8a88de4d7f95dac2c5a3f695
+      size: 2003226752
+    - path: artifacts\processed\y_train.npy
+      hash: md5
+      md5: 719ba75fe644e411bd4b2169f22f2f14
+      size: 79976
+    - path: params.yaml
+      hash: md5
+      md5: 800b6114484b557a8b77e5733b3eb743
+      size: 329
+    - path: src/model_training.py
+      hash: md5
+      md5: eebb89dbd99ac5ea62c9dd45dcefa3ab
+      size: 3354
+    outs:
+    - path: artifacts\models\fraud_detector.pt
+      hash: md5
+      md5: 80df8c89311bfe6fea5cd7b9035797da
+      size: 51404308
