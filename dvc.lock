@@ -24,3 +24,39 @@ stages:
       hash: md5
       md5: e03884827cf4ea14201134b7a3e01835
       size: 99944
+  data_preprocessing:
+    cmd: python -m src.data_preprocessing
+    deps:
+    - path: artifacts/raw/images.npy
+      hash: md5
+      md5: cbc45a0df053afa42f358d3201c1defb
+      size: 1878137984
+    - path: artifacts/raw/labels.npy
+      hash: md5
+      md5: e03884827cf4ea14201134b7a3e01835
+      size: 99944
+    - path: params.yaml
+      hash: md5
+      md5: 00ddf0d60bf4c6466bfe7765b0c575fb
+      size: 259
+    - path: src/data_preprocessing.py
+      hash: md5
+      md5: 8953f435cbc18bd930e64a045d08459a
+      size: 2194
+    outs:
+    - path: artifacts/processed/X_train.npy
+      hash: md5
+      md5: db2bc99a8a88de4d7f95dac2c5a3f695
+      size: 2003226752
+    - path: artifacts/processed/X_val.npy
+      hash: md5
+      md5: af237a65a7a51fc979d8b912ffd1780c
+      size: 500957312
+    - path: artifacts/processed/y_train.npy
+      hash: md5
+      md5: 719ba75fe644e411bd4b2169f22f2f14
+      size: 79976
+    - path: artifacts/processed/y_val.npy
+      hash: md5
+      md5: fb9c3040ae4cafedb143c17e18bd6dff
+      size: 20096

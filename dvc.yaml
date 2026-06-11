@@ -9,3 +9,15 @@ stages:
     outs:
       - artifacts/raw/images.npy
       - artifacts/raw/labels.npy
+  data_preprocessing:
+    cmd: python -m src.data_preprocessing
+    deps:
+      - src/data_preprocessing.py
+      - artifacts/raw/images.npy
+      - artifacts/raw/labels.npy
+      - params.yaml
+    outs:
+      - artifacts/processed/X_train.npy
+      - artifacts/processed/X_val.npy
+      - artifacts/processed/y_train.npy
+      - artifacts/processed/y_val.npy
